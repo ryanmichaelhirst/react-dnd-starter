@@ -1,0 +1,54 @@
+:root {
+    --primary-color: rgb(62, 100, 255);
+    --complete-color: #27aa80;
+    --text-color: #263646;
+    --disabled-color: #fad6d6;
+}
+
+body {
+    background-color: #fdfdfd;
+    color: var(--text-color);
+    font-family: rubik,arial;
+    margin: 0;
+}
+
+a {
+    color: unset;
+    text-decoration: unset;
+    cursor: pointer;
+}
+
+label {
+    font-size: 16px;
+    display: block;
+}
+
+h1 {
+    font-weight: 400;
+    font-size: 20px;
+}
+
+button {
+    border: none;
+    outline: none;
+    background: transparent;
+}
+
+input {
+    width: 100%;
+}
+
+input:focus {
+    outline: none;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.flex-item {
+    flex: 1 1 100%;
+    margin-bottom: 20px;
+}
