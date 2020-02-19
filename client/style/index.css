@@ -3,6 +3,11 @@
     --complete-color: #27aa80;
     --text-color: #263646;
     --disabled-color: #fad6d6;
+    --background-color: #f5eaea;
+}
+
+html {
+    background-color: #f5eaea;
 }
 
 body {
@@ -18,6 +23,12 @@ a {
     cursor: pointer;
 }
 
+p {
+    margin: 10px 0;
+    overflow-wrap: break-word;
+    text-align: left;
+}
+
 label {
     font-size: 16px;
     display: block;
@@ -28,27 +39,50 @@ h1 {
     font-size: 20px;
 }
 
-button {
-    border: none;
-    outline: none;
-    background: transparent;
+button, input {
+    padding: 4px;
+    border: 1px solid var(--disabled-color);
 }
 
-input {
-    width: 100%;
+button {
+    outline: none;
+    background: transparent;
+    border-radius: 5px;
+    color: var(--primary-color);
+    transition: all ease 0.8s;
+    cursor: pointer;
+}
+
+button.active {
+    color: var(--primary-color);
+}
+
+button.active:after {
+    content: "";
+    display: block;
+    margin: 0 auto;
+    width: 50%;
+    padding-top: 4px;
+    border-bottom: 1px solid var(--primary-color);
 }
 
 input:focus {
     outline: none;
 }
 
-.flex-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+select {
+    outline: none;
+    height: 40px;
 }
 
-.flex-item {
-    flex: 1 1 100%;
-    margin-bottom: 20px;
+.row {
+    display: flex;
+    flex-direction: column;
+}
+
+#app {
+    margin: 40px auto;
+    max-width: 400px;
+    text-align: center;
+    padding: 20px 0;
 }
