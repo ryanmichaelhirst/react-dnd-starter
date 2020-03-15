@@ -36,6 +36,11 @@ module.exports = {
                 }
             },
             {
+                test: /\.(png|jpg)$/,
+                include: path.join(__dirname, '/client/img'),
+                loader: 'file-loader'
+            },
+            {
                 test: /\.css$/i,
                 use: ['style-loader', 'css-loader'],
             }
